@@ -1,0 +1,13 @@
+{
+  "framework": null,
+  "installCommand": "",
+  "buildCommand": "node scripts/build-vercel.mjs",
+  "outputDirectory": "site-output",
+  "functions": {"api/router.js": {"maxDuration": 30}},
+  "rewrites": [
+    {"source": "/api/:path*", "destination": "/api/router?path=:path*"}
+  ],
+  "redirects": [
+    {"source": "/signout", "destination": "/", "permanent": false}
+  ]
+}
